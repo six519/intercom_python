@@ -6,7 +6,7 @@ A not official python bindings to Intercom API
 Installation
 ============
 
-```pip install intercom_python```
+``pip install intercom_python``
 
 Warning
 =======
