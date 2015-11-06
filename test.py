@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 from intercom import IntercomClient
 
-client = IntercomClient("xz7mkzq7", "5b79b8a73fa86637db14aea565cfe5d203310296")
+client = IntercomClient("<APP_ID>", "<APP_API_KEY>")
 
 print client.tags.get_list()
