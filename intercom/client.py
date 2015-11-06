@@ -12,3 +12,4 @@ class IntercomClient(object):
         self.contacts = IntercomContact(INTERCOM_API_BASE_URL, app_id, app_api_key)
         self.admins = IntercomAdmin(INTERCOM_API_BASE_URL, app_id, app_api_key)
         self.tags = IntercomTag(INTERCOM_API_BASE_URL, app_id, app_api_key)
+        self.segments = IntercomSegment(INTERCOM_API_BASE_URL, app_id, app_api_key)
