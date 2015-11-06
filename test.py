@@ -8,4 +8,4 @@ from intercom import IntercomClient
 
 client = IntercomClient("<APP_ID>", "<APP_API_KEY>")
 
-print client.conversations.get_list()
+print client.users.create({"email": "testuser@testuser.com"})
