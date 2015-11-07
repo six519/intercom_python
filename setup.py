@@ -7,7 +7,7 @@ except ImportError:
 
 setup(
     name="intercom_python",
-    version="1.0.5",
+    version="1.0.6",
     description="A not official python bindings to Intercom API",
     author="Ferdinand Silva",
     author_email="ferdinandsilva@ferdinandsilva.com",
