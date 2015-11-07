@@ -13,14 +13,14 @@ Usage
 ::
 
 	from intercom import IntercomClient
-	client = IntercomClient("", "")
+	client = IntercomClient("<APP_ID>", "<APP_API_KEY>")
 
 	# create user
 	print client.users.create({"email": "ferdinandsilva@ferdinandsilva.com"})
 
 	# list user
 	print client.users.get_list()
-	
+
 	# delete user
 	print client.users.delete({"email": "ferdinandsilva@ferdinandsilva.com"})
 
