@@ -6,6 +6,17 @@
 """
 from intercom import IntercomClient
 
-client = IntercomClient("<APP_ID>", "<APP_API_KEY>")
+client = IntercomClient("xz7mkzq7", "5b79b8a73fa86637db14aea565cfe5d203310296")
 
-print client.users.create({"email": "testuser@testuser.com"})
+#print client.users.create({"email": "ferdinandsilva@ferdinandsilva.com"})
+#print client.users.get_list()
+
+"""
+print client.events.create({
+  "event_name": 'Foo',
+  "created_at": 1439826340,
+  "user_id": 'bar'
+})
+"""
+
+print client.users.delete({"email": "ferdinandsilva@ferdinandsilva.com"})

@@ -15,12 +15,18 @@ class IntercomBaseModel(object):
         self.base_request_url = base_request_url
         self.name = ""
 
-    def get_list(self, *args, **kwargs):
-        ret = requests.get("%s%s" % (self.base_request_url, self.name), auth=HTTPBasicAuth(self.app_id, self.app_api_key), headers={'content-type': 'application/json', 'accept': 'application/json'})
+    def get_list(self, params={}):
+
+        ret = requests.get("%s%s" % (self.base_request_url, self.name), params=params, auth=HTTPBasicAuth(self.app_id, self.app_api_key), headers={'content-type': 'application/json', 'accept': 'application/json'})
 
         return ret.json()
 
     def create(self, request_dict={}):
         ret = requests.post("%s%s" % (self.base_request_url, self.name), json.dumps(request_dict), auth=HTTPBasicAuth(self.app_id, self.app_api_key), headers={'content-type': 'application/json', 'accept': 'application/json'})
+
+        return ret.json()
+
+    def delete(self, params={}):
+        ret = requests.delete("%s%s" % (self.base_request_url, self.name), params=params, auth=HTTPBasicAuth(self.app_id, self.app_api_key), headers={'content-type': 'application/json', 'accept': 'application/json'})
 
         return ret.json()
